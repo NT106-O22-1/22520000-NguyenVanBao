@@ -15,21 +15,18 @@ namespace Lab1
 		public Bai4()
 		{
 			InitializeComponent();
+			for (int i = 0; i < 10; i++)
+			{
+				for (int j = 0; j < 10; j++)
+				{
+					CheckBox cb = new CheckBox();
+					cb.Text = string.Format("{0} {1}", i, j);
+					cb.Name = string.Format("cb_{0}_{1}", i, j);
+					cb.Location = new Point((i+1)*50, (j+1)*50);
+					groupBox1.Controls.Add(cb);
+				}
+			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void button1_Click_1(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void button2_Click(object sender, EventArgs e)
-		{
-			
-		}
 	}
 }
