@@ -34,6 +34,8 @@
 			button4 = new Button();
 			button5 = new Button();
 			button6 = new Button();
+			button7 = new Button();
+			button8 = new Button();
 			SuspendLayout();
 			// 
 			// button1
@@ -92,11 +94,32 @@
 			button6.Text = "Bài 6";
 			button6.UseVisualStyleBackColor = true;
 			// 
+			// button7
+			// 
+			button7.Location = new Point(50, 70);
+			button7.Name = "button7";
+			button7.Size = new Size(75, 23);
+			button7.TabIndex = 0;
+			button7.Text = "Bài 7";
+			button7.UseVisualStyleBackColor = true;
+			// 
+			// button8
+			// 
+			button8.Location = new Point(131, 70);
+			button8.Name = "button8";
+			button8.Size = new Size(75, 23);
+			button8.TabIndex = 0;
+			button8.Text = "Bài 8";
+			button8.UseVisualStyleBackColor = true;
+			button8.Click += button8_Click;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(261, 74);
+			ClientSize = new Size(261, 113);
+			Controls.Add(button8);
+			Controls.Add(button7);
 			Controls.Add(button6);
 			Controls.Add(button5);
 			Controls.Add(button4);
@@ -116,5 +139,7 @@
 		private Button button4;
 		private Button button5;
 		private Button button6;
+		private Button button7;
+		private Button button8;
 	}
 }

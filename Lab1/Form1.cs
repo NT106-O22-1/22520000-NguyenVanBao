@@ -18,5 +18,11 @@
 			Bai4 bai4 = new Bai4();
 			bai4.ShowDialog();
 		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			Bai8 bai8 = new Bai8();
+			bai8.ShowDialog();
+		}
 	}
 }
