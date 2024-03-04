@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace Lab1
 {
-	public partial class Bai4 : Form
+	public partial class Bai1 : Form
 	{
-		public Bai4()
+		public Bai1()
 		{
 			InitializeComponent();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-
-		}
-
-		private void button1_Click_1(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void button2_Click(object sender, EventArgs e)
-		{
-			
+			tbTong.Text = (int.Parse(tbSoThu1.Text) + int.Parse(tbSoThu2.Text)).ToString();
 		}
 	}
 }
