@@ -30,7 +30,9 @@ namespace lab2
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
 				FileStream fileStream = new FileStream(openFileDialog.FileName, FileMode.Open);
-				List<Phim> phims = JsonSerializer.Deserialize<List<Phim>>(fileStream);
+				List<Phim>? phims = JsonSerializer.Deserialize<List<Phim>>(fileStream);
+				comboBox1.DataSource = phims;
+				comboBox1.DisplayMember = "TenPhim";
 			}
 		}
 	}
