@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,6 +44,7 @@ namespace Lab1
 			};
 
 			List<Phim> phims = new List<Phim>();
+
 			phims.Add(phim1);
 			phims.Add(phim2);
 			phims.Add(phim3);
