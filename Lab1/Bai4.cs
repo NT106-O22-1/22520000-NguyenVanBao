@@ -12,21 +12,62 @@ namespace Lab1
 {
 	public partial class Bai4 : Form
 	{
+		class Phim
+		{
+			public string TenPhim { get; set; }
+			public int GiaVeChuan { get; set; }
+			public int[] PhongChieu { get; set; }
+		}
+
 		public Bai4()
 		{
 			InitializeComponent();
-			for (int i = 0; i < 10; i++)
+
+			Phim phim1 = new Phim()
 			{
-				for (int j = 0; j < 10; j++)
+				TenPhim = "Đào, phở và piano",
+				GiaVeChuan = 45000,
+				PhongChieu = [1, 2, 3]
+			};
+			Phim phim2 = new Phim()
+			{
+				TenPhim = "Mai",
+				GiaVeChuan = 100000,
+				PhongChieu = [2, 3]
+			};
+			Phim phim3 = new Phim()
+			{
+				TenPhim = "Tarot",
+				GiaVeChuan = 90000,
+				PhongChieu = [3]
+			};
+
+			List<Phim> phims = new List<Phim>();
+			phims.Add(phim1);
+			phims.Add(phim2);
+			phims.Add(phim3);
+
+			comboBox1.DataSource = phims;
+			comboBox1.DisplayMember = "TenPhim";
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Phim selectedPhim = comboBox1.SelectedItem as Phim;
+
+			List<CheckBox> checkBoxes = groupBox1.Controls.OfType<CheckBox>().ToList();
+			foreach (CheckBox checkBox in checkBoxes)
+			{
+				if (checkBox.Checked)
 				{
-					CheckBox cb = new CheckBox();
-					cb.Text = string.Format("{0} {1}", i, j);
-					cb.Name = string.Format("cb_{0}_{1}", i, j);
-					cb.Location = new Point((i+1)*50, (j+1)*50);
-					groupBox1.Controls.Add(cb);
+					string hangGhe = checkBox.Name.Split("_")[0];
+					int soTTGhe = int.Parse(checkBox.Name.Split("_")[1]);
+					int giaVeChuan = selectedPhim.GiaVeChuan;
+
+					// tinh tien
+
 				}
 			}
 		}
-
 	}
 }

@@ -20,6 +20,11 @@ namespace Lab1
 		private void button1_Click(object sender, EventArgs e)
 		{
 			tbTong.Text = (int.Parse(tbSoThu1.Text) + int.Parse(tbSoThu2.Text)).ToString();
+			int soThuNhat;
+			if (!int.TryParse(tbSoThu1.Text, out soThuNhat))
+			{
+				MessageBox.Show("Vui long nhap so nguyen");
+			}
 		}
 	}
 }
