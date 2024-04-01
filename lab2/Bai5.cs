@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,8 +16,13 @@ namespace lab2
 	{
 		class Phim
 		{
+			[JsonPropertyName("TenPhim")]
 			public string TenPhim { get; set; }
+
+			[JsonPropertyName("GiaVeChuan")]
 			public int GiaVeChuan { get; set; }
+
+			[JsonPropertyName("PhongChieu")]
 			public int[] PhongChieu { get; set; }
 		}
 		public Bai5()
